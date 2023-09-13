@@ -17,7 +17,7 @@ const Quote = () => {
            
             
             setQuote(randomQuotes.quote)
-           
+            setAuthor(randomQuotes.author)
         }
         fetchData()
     }, [])
