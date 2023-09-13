@@ -25,7 +25,8 @@ const Quote = () => {
 
   return (
     <div>
-     
+        <p>{quote}</p>
+       
     </div>
   )
 }
