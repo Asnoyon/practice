@@ -10,15 +10,23 @@ const Quote = () => {
             const data= await res.json();
 
             let dataQuotes = data.quotes;
-      
-            console.log(data);
+            
+            let randomNum = Math.floor(Math.random()* dataQuotes.length)
+
+            let randomQuotes = dataQuotes[randomNum]
+           
+            
+            setQuote(randomQuotes.quote)
+           
         }
         fetchData()
     }, [])
     
 
   return (
-    <div><p>{dataQuotes}</p></div>
+    <div>
+     
+    </div>
   )
 }
 
