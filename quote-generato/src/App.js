@@ -1,4 +1,5 @@
 import React from 'react'
+import './App.css'
 import Quote from './quote/Quote'
 
 const App = () => {
