@@ -28,15 +28,17 @@ const Quote = () => {
         fetchData()
     }
 
-  return (
-    <div>
-       <div className="quote">
-       <p>{quote}</p>
-        <h2>{author}</h2>
-       </div>
-       <button onClick={handleClick}>Next Quote</button>
+return (
+    <div id="quote-box">
+    <div id="text"><p>{quote}</p></div>
+    <div id="author"><p>{author}</p></div>
+
+    <div id="buttons">
+      <button onClick={handleClick} id="new-quote">New Quote</button>
     </div>
+  </div>
   )
+
 }
 
 export default Quote
