@@ -5,6 +5,8 @@ export class AppC extends Component {
     count:0
    }
 
+   intervalId = null
+
    increment=()=>{
     this.setState({count: this.state.count+1})
    }
@@ -13,6 +15,21 @@ export class AppC extends Component {
         this.setState({count: this.state.count-1})
     }
    }
+
+   startTimer=()=>{
+    if(this.state.count>0 && !this.intervalId){
+       this.intervalId= setInterval(() => {
+        this.setState({count: this.state.count - 1}, ()=>{
+            if(this.state.count===0){
+                alert('Timer finished')
+                clearInterval(this.intervalId)
+                this.intervalId=null
+            }
+        })
+    }, 1000);
+    }
+   }
+
   render() {
     return (
       <div>
@@ -26,7 +43,7 @@ export class AppC extends Component {
                 <button onClick={this.increment} >+</button>
             </div>
             <div className="container_2">
-                <button className='down'>Start</button>
+                <button className='down' onClick={this.startTimer}>Start</button>
                 <button className='down'>Stop</button>
                 <button className='down'>Reset</button>
             </div>
