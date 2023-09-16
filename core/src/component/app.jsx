@@ -25,6 +25,11 @@ export class AppC extends Component {
                 <span>{this.state.count}</span>
                 <button onClick={this.increment} >+</button>
             </div>
+            <div className="container_2">
+                <button className='down'>Start</button>
+                <button className='down'>Stop</button>
+                <button className='down'>Reset</button>
+            </div>
         </div>
       </div>
     )
