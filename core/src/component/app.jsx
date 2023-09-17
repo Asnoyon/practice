@@ -30,6 +30,10 @@ export class AppC extends Component {
     }
    }
 
+   stopTimer=()=>{
+    
+   }
+
   render() {
     return (
       <div>
@@ -44,7 +48,7 @@ export class AppC extends Component {
             </div>
             <div className="container_2">
                 <button className='down' onClick={this.startTimer}>Start</button>
-                <button className='down'>Stop</button>
+                <button className='down'onClick={this.stopTimer}>Stop</button>
                 <button className='down'>Reset</button>
             </div>
         </div>
