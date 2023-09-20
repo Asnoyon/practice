@@ -34,7 +34,7 @@ export class AppC extends Component {
     
    }
    resetTimer=()=>{
-    
+    alert("The time is reset")
    }
 
   render() {
