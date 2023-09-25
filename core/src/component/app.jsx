@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 
 export class AppC extends Component {
+
+    //here function start
     date1 = new date()
    state={
     count:0
