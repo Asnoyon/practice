@@ -38,7 +38,9 @@ export class AppC extends Component {
     }
    }
    resetTimer=()=>{
-    alert("The time is reset")
+        this.setState({count:0})
+        clearInterval(this.intervalId)
+        this.intervalId=null
    }
 
   render() {
