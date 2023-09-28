@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 
 export class AppC extends Component {
 
-    //here function start
-    date1 = new date()
    state={
     count:0
    }
@@ -34,7 +32,10 @@ export class AppC extends Component {
    }
 
    stopTimer=()=>{
-    alert("The time is reset")
+    if(this.intervalId){
+        clearInterval(this.intervalId);
+        this.intervalId=null
+    }
    }
    resetTimer=()=>{
     alert("The time is reset")
