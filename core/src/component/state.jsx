@@ -3,7 +3,8 @@ import React, { useState } from 'react'
 const State = () => {
     const [count,setCount]=useState(0);
     const handleClick = ()=>{
-        setCount(count+1)
+        setCount((prev)=>prev+1)
+        
     }
     const handleMinusClick = ()=>{
         if(count!==0){
@@ -15,6 +16,7 @@ const State = () => {
         <div>
             <button onClick={handleMinusClick}>-</button>
             <h1>{count}</h1>
+            {/* <button onClick={()=>handleClick(2)}>+</button> */}
             <button onClick={handleClick}>+</button>
         </div>
     </>
