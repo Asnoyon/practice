@@ -1,8 +1,10 @@
-import React from 'react'
-
+import Home from './pages/home/home'
+import {Person} from '@material-ui/icons'
 const App = () => {
   return (
-    <div>App</div>
+    <>
+      <Person/>
+    </>
   )
 }
 
