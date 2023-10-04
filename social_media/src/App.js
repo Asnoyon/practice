@@ -1,9 +1,9 @@
-import Home from './pages/home/home'
-import {Person} from '@material-ui/icons'
+import Home from "./pages/home/Home"
+
 const App = () => {
   return (
     <>
-      <Person/>
+      <Home/>
     </>
   )
 }
