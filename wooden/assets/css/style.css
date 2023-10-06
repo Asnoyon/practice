@@ -59,10 +59,36 @@ header {
   cursor: pointer;
   padding: 0.625rem;
 }
-.home{
+/* header section ends */
+.home {
   width: 100%;
   position: relative;
-  background:#eeeff1;
+  background: #eeeff1;
   display: grid;
   align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
 }
+.home .text {
+  margin: 0 4.375rem;
+}
+.home .text h1 {
+  font-size: 2.5rem;
+}
+.home .text h1 span {
+  color: #a7204c;
+}
+.home .text p{
+  margin: 1rem 0;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.btn{
+  padding: 0.625rem 1.25rem;
+  background-color: #a7204c;
+  font-weight: 500;
+  color: #fff;
+  border-radius: 0.5rem;
+}
+
+/* home section ends */
