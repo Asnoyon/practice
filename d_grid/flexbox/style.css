@@ -4,16 +4,13 @@
   box-sizing: border-box;
 }
 section {
-  
   width: 100%;
-  display: flex;
   background-color: cyan;
-  justify-content: space-between;
 }
 section div {
   border: 1px solid red;
   padding: 12px;
-  width: 30%;
+  flex-basis: 30%;
 }
 .flex1 {
   /* flex: 3; */
@@ -25,4 +22,11 @@ section div {
 }
 .flex3 {
   background-color: rgb(88, 28, 28);
+}
+
+@media (min-width: 768px) {
+ section{
+  display: flex;
+  justify-content: space-between;
+ }
 }
