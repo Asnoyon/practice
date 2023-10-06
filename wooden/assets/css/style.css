@@ -38,7 +38,7 @@ header {
   padding: 0.938rem 3.125rem;
 }
 .logo i {
-  color: #fe5b3b;
+  color: #a7204c;
 }
 .logo {
   color: #444;
@@ -54,7 +54,7 @@ header {
 .icons i {
   font-size: 1.2rem;
   color: #fff;
-  background-color: #fe5b3b;
+  background-color: #a7204c;
   border-radius: 0.5rem;
   cursor: pointer;
   padding: 0.625rem;
