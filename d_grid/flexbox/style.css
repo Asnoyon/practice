@@ -4,11 +4,11 @@
   box-sizing: border-box;
 }
 section {
-  padding: 0 15px;
+  
   width: 100%;
   display: flex;
   background-color: cyan;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 section div {
   border: 1px solid red;
