@@ -171,3 +171,79 @@ header {
   align-items: center;
   justify-content: center;
 }
+
+/* products end here */
+
+.news {
+  text-align: center;
+  margin-top: 2rem;
+  background: #eeeff1;
+  padding: 3rem;
+}
+.news h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.news form input[type="email"] {
+  padding: 1rem;
+  width: 25rem;
+  outline-color: #a7204c;
+  border-radius: 0.438rem;
+  border: 1px solid silver;
+  font-size: 1rem;
+  color: #111;
+}
+.news form input[type="submit"] {
+  cursor: pointer;
+  width: 7.5rem;
+  height: 3.125rem;
+}
+.news form input[type="submit"]:active {
+  transform: scale(0.9);
+}
+
+/* news part end here */
+.footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13.75rem, auto));
+  gap: 1rem;
+}
+.con {
+  display: flex;
+  flex-direction: column;
+}
+.con .abouts {
+  max-width: 30.125rem;
+}
+.con .abouts p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+.con h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.con a {
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+.sci .bx {
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  background: #a7204c;
+  border-radius: 100%;
+  color: #fff;
+}
+.sci .bx:hover {
+  transform: scale(0.8);
+}
+.copy {
+  text-align: center;
+  padding: 0.625rem;
+  border-top: 2px dotted silver;
+}
