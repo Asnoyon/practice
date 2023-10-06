@@ -78,12 +78,12 @@ header {
 .home .text h1 span {
   color: #a7204c;
 }
-.home .text p{
+.home .text p {
   margin: 1rem 0;
   font-size: 1rem;
   line-height: 1.5rem;
 }
-.btn{
+.btn {
   padding: 0.625rem 1.25rem;
   background-color: #a7204c;
   font-weight: 500;
@@ -92,3 +92,82 @@ header {
 }
 
 /* home section ends */
+.about {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+.about .text h2 {
+  font-size: 1.5rem;
+}
+.about .text p {
+  text-align: justify;
+  margin: 1rem 0;
+}
+.features {
+  display: grid;
+  margin-bottom: 1.25rem;
+}
+.features i {
+  font-size: 1.125rem;
+  margin-right: 1rem;
+  color: #a7204c;
+}
+
+/* about section ends here */
+
+.headings {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 2.5rem;
+}
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15.625rem, auto));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.box {
+  padding: 0.625rem;
+  background-color: #eeeff1;
+  border-radius: 0.5rem;
+  display: grid;
+}
+.box img {
+  width: 12.5rem;
+  height: 12.5rem;
+  margin-left: 1.5rem;
+  margin-bottom: 0.625rem;
+  object-fit: cover;
+  object-position: center;
+  cursor: pointer;
+}
+.box-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: #444;
+  padding: 0.625rem;
+  border-radius: 0.5rem;
+}
+.price h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+}
+.price span {
+  color: #fff;
+  margin-top: 0.313rem;
+}
+.box-text a {
+  padding: 0.625rem;
+  font-size: 1.25rem;
+  background: #111;
+  color: #fff;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
