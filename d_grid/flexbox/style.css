@@ -3,3 +3,26 @@
   padding: 0;
   box-sizing: border-box;
 }
+section {
+  padding: 0 15px;
+  width: 100%;
+  display: flex;
+  background-color: cyan;
+  justify-content: space-around;
+}
+section div {
+  border: 1px solid red;
+  padding: 12px;
+  width: 30%;
+}
+.flex1 {
+  /* flex: 3; */
+  background-color: yellowgreen;
+}
+.flex2 {
+  /* flex: 2; */
+  background-color: rgb(57, 57, 201);
+}
+.flex3 {
+  background-color: rgb(88, 28, 28);
+}
