@@ -1,13 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import Increment from "./component/Increment";
+import List from "./component/List";
 // import AppC from './component/app'
 // import State from "./component/state";
 const App = () => {
+  const [number, setNumber] = useState(0);
+  const mfactor = [1, 2, 3, 4, 5];
+  const multiply = mfactor.map((factor) => factor * number);
   return (
     <>
       {/* <AppC/> */}
       {/* <State/> */}
       <Increment />
+      <h1>List in React</h1>
+      <input
+        type="number"
+        value={number}
+        onChange={(e) => setNumber(e.target.value)}
+      />
+      {multiply.map((multiple) => (
+        <List production={multiple}/>
+      ))}
     </>
   );
 };
