@@ -1,18 +1,18 @@
+//Axios and Fetch Data
 import { useEffect, useState } from "react";
-import axios from "axios";
+import axios from "./Axios";
 const Main = () => {
   const [cuteDog, setCuteDog] = useState("");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   useEffect(() => {
     axios({
-        url:"https://dog.ceo/api/breeds/image/random",
-        method:"GET"
-    })
-      .then((res) => {
-        setCuteDog(res.data.message);
-        // console.log(res)
-      });
+      url: "https://dog.ceo/api/breeds/image/random",
+      method: "GET",
+    }).then((res) => {
+      setCuteDog(res.data.message);
+      // console.log(res)
+    });
   }, []);
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -20,8 +20,13 @@ const Main = () => {
       name,
       phone,
     };
-    axios.post("https://jsonplaceholder.typicode.com/posts",dataToSubmit)
-      .then(res=>{console.log(res)})
+    axios({
+      url: "posts",
+      method: "POST",
+      data: dataToSubmit,
+    }).then((res) => {
+      console.log(res);
+    });
   };
   return (
     <div>
