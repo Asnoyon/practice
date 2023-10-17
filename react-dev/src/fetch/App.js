@@ -1,14 +1,17 @@
 import { useEffect, useState } from "react";
-
+import axios from "axios";
 const Main = () => {
   const [cuteDog, setCuteDog] = useState("");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   useEffect(() => {
-    fetch("https://dog.ceo/api/breeds/image/random")
-      .then((res) => res.json())
+    axios({
+        url:"https://dog.ceo/api/breeds/image/random",
+        method:"GET"
+    })
       .then((res) => {
-        setCuteDog(res.message);
+        setCuteDog(res.data.message);
+        // console.log(res)
       });
   }, []);
   const handleSubmit = (event) => {
@@ -17,14 +20,7 @@ const Main = () => {
       name,
       phone,
     };
-    fetch("https://jsonplaceholder.typicode.com/posts", {
-      method: "POST",
-      body: JSON.stringify(dataToSubmit),
-      headers: {
-        "Content-type": "application/json; charset=UTF-8",
-      },
-    })
-      .then((res) => res.json())
+    axios.post("https://jsonplaceholder.typicode.com/posts",dataToSubmit)
       .then(res=>{console.log(res)})
   };
   return (
