@@ -1,32 +1,26 @@
 //Axios and Fetch Data
-import { useEffect, useState } from "react";
-import axios from "./Axios";
+import { useState } from "react";
+import  usPost from "./postservice";
 const Main = () => {
   const [cuteDog, setCuteDog] = useState("");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
-  useEffect(() => {
-    axios({
-      url: "https://dog.ceo/api/breeds/image/random",
-      method: "GET",
-    }).then((res) => {
-      setCuteDog(res.data.message);
-      // console.log(res)
-    });
-  }, []);
+  // useEffect(() => {
+  //   axios({
+  //     url: "https://dog.ceo/api/breeds/image/random",
+  //     method: "GET",
+  //   }).then((res) => {
+  //     setCuteDog(res.data.message);
+  //     // console.log(res)
+  //   });
+  // }, []);
   const handleSubmit = (event) => {
     event.preventDefault();
     const dataToSubmit = {
       name,
       phone,
     };
-    axios({
-      url: "posts",
-      method: "POST",
-      data: dataToSubmit,
-    }).then((res) => {
-      console.log(res);
-    });
+    usPost(dataToSubmit);
   };
   return (
     <div>
