@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-// import Greet from "./component/Greet";
+import Greet from "./component/Greet";
 import { BrowserRouter } from "react-router-dom";
 import UserList from "./component/UserList";
 import { Data } from "./Data";
@@ -20,7 +20,7 @@ const App = () => {
   }, []);
   return (
     <div>
-      {/* <Greet name="Noyon" /> */}
+      <Greet name="Noyon" />
       <UserListWithLoader users={user} isLoading={loading} />
       <Main />
       <BrowserRouter>
