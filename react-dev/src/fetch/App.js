@@ -5,15 +5,15 @@ const Main = () => {
   const [cuteDog, setCuteDog] = useState("");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
-  // useEffect(() => {
-  //   axios({
-  //     url: "https://dog.ceo/api/breeds/image/random",
-  //     method: "GET",
-  //   }).then((res) => {
-  //     setCuteDog(res.data.message);
-  //     // console.log(res)
-  //   });
-  // }, []);
+  useEffect(() => {
+    axios({
+      url: "https://dog.ceo/api/breeds/image/random",
+      method: "GET",
+    }).then((res) => {
+      setCuteDog(res.data.message);
+      // console.log(res)
+    });
+  }, []);
   const handleSubmit = (event) => {
     event.preventDefault();
     const dataToSubmit = {
@@ -35,7 +35,7 @@ const Main = () => {
             value={name}
             name="name"
             onChange={(e) => setName(e.target.value)}
-          />{" "}
+          />
           <br />
         </label>
         <label>
@@ -45,7 +45,7 @@ const Main = () => {
             value={phone}
             name="phone"
             onChange={(e) => setPhone(e.target.value)}
-          />{" "}
+          />
           <br />
         </label>
         <input type="submit" />
