@@ -3,3 +3,4 @@
 2. fetch
 3. get
 4. post
+*Here all javascript practice*
